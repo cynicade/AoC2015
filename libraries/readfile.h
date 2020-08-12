@@ -2,20 +2,20 @@
 #include <string>
 #include <vector>
 
-namespace libreader
+namespace libreadfile
 {
-  class ReadFile
-  {
-  public:
-    ReadFile(std::string fileName);
-    void read();
-    int getLineCount();
-    std::vector<std::string> getLines();
-    virtual ~ReadFile();
+    class ReadFile
+    {
+    public:
+        ReadFile(std::string fileName);
+        void read();
+        int getLineCount();
+        std::vector<std::string> getLines();
+        virtual ~ReadFile();
 
-  private:
-    std::string fileName;
-    std::vector<std::string> lines;
-    int lineCount = 0;
-  };
+    private:
+        std::string fileName;
+        std::vector<std::string> lines;
+        int lineCount = 0;
+    };
 } // namespace libreader

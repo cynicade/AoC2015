@@ -3,45 +3,45 @@
 #include <fstream>
 #include <vector>
 
-namespace libreader
+namespace libreadfile
 {
-  ReadFile::ReadFile(std::string fileName)
-  {
-    this->fileName = fileName;
-  }
-
-  void ReadFile::read()
-  {
-    std::string line;
-    std::ifstream file(fileName);
-
-    if (file.is_open())
+    ReadFile::ReadFile(std::string fileName)
     {
-      while (getline(file, line))
-      {
-        ReadFile::lineCount++;
-        ReadFile::lines.push_back(line);
-      }
-
-      file.close();
+        this->fileName = fileName;
     }
-    else
+
+    void ReadFile::read()
     {
-      std::cout << "ERROR: Unable to open " << fileName << std::endl;
+        std::string line;
+        std::ifstream file(fileName);
+
+        if (file.is_open())
+        {
+            while (getline(file, line))
+            {
+                ReadFile::lineCount++;
+                ReadFile::lines.push_back(line);
+            }
+
+            file.close();
+        }
+        else
+        {
+            std::cout << "ERROR: Unable to open " << fileName << std::endl;
+        }
     }
-  }
 
-  int ReadFile::getLineCount()
-  {
-    return ReadFile::lineCount;
-  }
+    int ReadFile::getLineCount()
+    {
+        return ReadFile::lineCount;
+    }
 
-  std::vector<std::string> ReadFile::getLines()
-  {
-    return ReadFile::lines;
-  }
+    std::vector<std::string> ReadFile::getLines()
+    {
+        return ReadFile::lines;
+    }
 
-  ReadFile::~ReadFile()
-  {
-  }
+    ReadFile::~ReadFile()
+    {
+    }
 } // namespace libreader
