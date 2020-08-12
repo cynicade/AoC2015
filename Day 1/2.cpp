@@ -19,7 +19,7 @@ int main(int argc, char **argv)
     fileName = "input.txt";
   }
 
-  libreader::ReadFile file = libreader::ReadFile(fileName);
+  libreadfile::ReadFile file = libreadfile::ReadFile(fileName);
 
   file.read();
   std::vector<std::string> lines = file.getLines();
