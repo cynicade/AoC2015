@@ -5,10 +5,10 @@ day1_2:
 	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 1/2.cpp ./libraries/readfile.cpp -o day1_2.exe
 
 day2_1:
-	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 2/1.cpp ./libraries/readfile.cpp ./libraries/split.cpp -ggdb -o day2_1.exe
+	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 2/1.cpp ./libraries/readfile.cpp ./libraries/split.cpp -o day2_1.exe
 
 day2_2:
-	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 2/2.cpp ./libraries/readfile.cpp -o day2_2.exe
+	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 2/2.cpp ./libraries/readfile.cpp ./libraries/split.cpp -o day2_2.exe
 
 clean:
 	rm *.exe
