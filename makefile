@@ -14,7 +14,8 @@ day3_1:
 	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 3/1.cpp ./libraries/readfile.cpp -o day3_1.exe
 
 day3_2:
-	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 3/1.cpp ./libraries/readfile.cpp ./libraries/contains.h -o day3_1.exe
+	g++ -Wall -Wextra -pedantic -std=c++14 ./Day\ 3/2.cpp ./libraries/readfile.cpp -o day3_2.exe
 
 clean:
 	rm *.exe
+	rm *.txt
